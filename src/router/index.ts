@@ -1,16 +1,10 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import baseRouter from './modules/baseRouter'
+import mainRouter from './modules/mainRouter'
 
-const routes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Home.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+const routes = [
+  ...baseRouter,
+  ...mainRouter
 ]
 
 const router = createRouter({
