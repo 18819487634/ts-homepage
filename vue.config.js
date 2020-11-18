@@ -60,12 +60,19 @@ module.exports = {
     sourceMap: false,
     // 为预处理器的loader传递自定义选项
     loaderOptions: {
-      css: {},
+      scss: {
+        prependData: `@import "~@/assets/css/variables.scss";`
+      },
       postcss: {
         plugins: [
           // autoprefixer补全css前缀(解决兼容性)
           require('autoprefixer')({
             overrideBrowserslist: ['Android >= 4.0', 'iOS >= 7']
+          }),
+          // px2rem手机端适配
+          require('postcss-pxtorem')({
+            rootValue : 108, // 设计稿的1/10
+            propList  : ['*'],
           })
         ]
       }

@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    头部
+  <div>
+    登录
   </div>
 </template>
 
@@ -11,8 +11,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.header {
-  height: 90px;
-  border-bottom: 1px solid $themeColor;
-}
+
 </style>
