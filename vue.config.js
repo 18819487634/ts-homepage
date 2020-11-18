@@ -61,7 +61,7 @@ module.exports = {
     // 为预处理器的loader传递自定义选项
     loaderOptions: {
       scss: {
-        prependData: `@import "~@/assets/css/variables.scss";`
+        prependData: `@import "~@/assets/css/modules/variables.scss";`
       },
       postcss: {
         plugins: [

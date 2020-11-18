@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header />
-    <router-view/>
+    <div class="main">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -23,4 +25,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+#app {
+  height: 100%;
+  width: 100%;
+}
+.main {
+  padding-top: 100px;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="header">
+  <header class="navbar">
     头部
-  </div>
+  </header>
 </template>
 
 <script lang="ts">
@@ -11,8 +11,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.header {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 90px;
-  border-bottom: 1px solid $themeColor;
+  border-bottom: 1px solid $borderColor;
 }
 </style>
