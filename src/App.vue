@@ -11,6 +11,7 @@
 import Header from '@/components/header/index.vue'
 import { defineComponent, onMounted } from 'vue'
 
+
 export default defineComponent({
   name: 'App',
   components: {

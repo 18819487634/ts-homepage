@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="test">
     {{ msg }}
   </div>
 </template>
@@ -9,9 +9,13 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'home',
   setup () {
-    const msg = '首页'
+    const msg:string = '首页'
+    const test = ():any => {
+      return 'x'
+    }
     return {
-      msg
+      msg,
+      test
     }
   }
 })
